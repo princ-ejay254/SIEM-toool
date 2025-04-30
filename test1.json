@@ -1,0 +1,21 @@
+[
+  {
+    "event": "ssh_failed",
+    "source_ip": "203.0.113.5",
+    "user": "root",
+    "count": 8,
+    "message": "Failed SSH login attempt",
+    "severity": "high",
+    "timestamp": "2023-06-15T09:25:00Z"
+  },
+  {
+    "event": "ssh_failed",
+    "source_ip": "203.0.113.12",
+    "user": "admin",
+    "count": 12,
+    "message": "Multiple failed SSH attempts",
+    "severity": "critical",
+    "timestamp": "2023-06-15T09:30:00Z"
+  }
+  // ... (rest of your events)
+]

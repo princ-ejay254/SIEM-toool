@@ -1,0 +1,146 @@
+{
+  "logs": [
+    {
+      "event": "ssh_failed",
+      "source_ip": "203.0.113.5",
+      "user": "root",
+      "count": 8,
+      "message": "Failed SSH login attempt",
+      "severity": "high",
+      "timestamp": "2023-06-15T09:25:00Z"
+    },
+    {
+      "event": "ssh_failed",
+      "source_ip": "203.0.113.12",
+      "user": "admin",
+      "count": 12,
+      "message": "Multiple failed SSH attempts",
+      "severity": "critical",
+      "timestamp": "2023-06-15T09:30:00Z"
+    },
+    {
+      "event": "port_scan",
+      "source_ip": "198.51.100.45",
+      "ports_scanned": 28,
+      "duration_seconds": 42,
+      "message": "Aggressive port scanning detected",
+      "severity": "critical",
+      "timestamp": "2023-06-15T10:15:00Z"
+    },
+    {
+      "event": "web_attack",
+      "source_ip": "45.33.12.88",
+      "method": "POST",
+      "url": "/login.php",
+      "payload": "1' OR '1'='1'--",
+      "message": "SQL injection attempt",
+      "severity": "high",
+      "category": "sql_injection",
+      "timestamp": "2023-06-15T10:45:00Z"
+    },
+    {
+      "event": "web_attack",
+      "source_ip": "185.143.223.11",
+      "method": "GET",
+      "url": "/contact",
+      "payload": "<script>alert(1)</script>",
+      "message": "XSS attempt detected",
+      "severity": "medium",
+      "category": "xss",
+      "timestamp": "2023-06-15T11:05:00Z"
+    },
+    {
+      "event": "data_exfiltration",
+      "source_ip": "172.16.23.45",
+      "destination_ip": "104.18.22.33",
+      "bytes_out": 2548791,
+      "protocol": "HTTPS",
+      "message": "Large data transfer to external server",
+      "severity": "critical",
+      "filename": "customer_data.zip",
+      "timestamp": "2023-06-15T11:30:00Z"
+    },
+    {
+      "event": "malware_detected",
+      "host": "webserver-01",
+      "file_path": "/var/www/uploads/temp.exe",
+      "malware_type": "Trojan.Win32.Emotet",
+      "message": "Malicious file detected",
+      "severity": "critical",
+      "action_taken": "quarantined",
+      "timestamp": "2023-06-15T12:00:00Z"
+    },
+    {
+      "event": "auth_failed",
+      "source_ip": "10.2.3.12",
+      "user": "admin",
+      "application": "VPN",
+      "message": "Failed authentication attempt",
+      "severity": "medium",
+      "timestamp": "2023-06-15T12:15:00Z"
+    },
+    {
+      "event": "auth_success",
+      "source_ip": "192.168.1.100",
+      "user": "jdoe",
+      "application": "CRM",
+      "message": "User logged in",
+      "severity": "low",
+      "timestamp": "2023-06-15T12:30:00Z"
+    },
+    {
+      "event": "dns_tunneling",
+      "source_ip": "10.5.6.78",
+      "domain": "x23kdf9d.attacker.com",
+      "query_length": 253,
+      "message": "Possible DNS tunneling detected",
+      "severity": "high",
+      "timestamp": "2023-06-15T13:00:00Z"
+    },
+    {
+      "event": "beaconing",
+      "source_ip": "192.168.2.45",
+      "destination_ip": "91.234.116.23",
+      "interval_seconds": 300,
+      "message": "Regular beaconing activity detected",
+      "severity": "high",
+      "timestamp": "2023-06-15T13:30:00Z"
+    },
+    {
+      "event": "http_request",
+      "source_ip": "192.168.1.15",
+      "method": "GET",
+      "status_code": 200,
+      "url": "/index.html",
+      "message": "Normal web traffic",
+      "severity": "low",
+      "timestamp": "2023-06-15T14:00:00Z"
+    },
+    {
+      "event": "file_change",
+      "host": "fileserver-01",
+      "file_path": "/etc/passwd",
+      "action": "modified",
+      "message": "Critical system file modified",
+      "severity": "high",
+      "timestamp": "2023-06-15T14:15:00Z"
+    },
+    {
+      "event": "brute_force",
+      "source_ip": "203.0.113.89",
+      "service": "ftp",
+      "attempts": 23,
+      "message": "FTP brute force attack",
+      "severity": "high",
+      "timestamp": "2023-06-15T14:30:00Z"
+    },
+    {
+      "event": "geo_anomaly",
+      "source_ip": "41.223.57.89",
+      "user": "service_account",
+      "message": "Login from unusual geographic location",
+      "severity": "medium",
+      "timestamp": "2023-06-15T15:00:00Z"
+    }
+  ]
+}

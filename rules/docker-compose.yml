@@ -1,0 +1,23 @@
+version: '3'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    ports:
+      - "9200:9200"  # Add this line to expose port 9200
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+  kafka:
+    image: bitnami/kafka:3.5
+    ports:
+      - "9091:9091"
+    environment:
+      - KAFKA_CFG_LISTENERS=PLAINTEXT://:9091
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://localhost:9091
+      - KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true
+    depends_on:
+      - elasticsearch
+
+volumes:
+  es_data:

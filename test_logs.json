@@ -1,0 +1,84 @@
+[
+    {
+    "timestamp": "...",
+    "source_ip": "192.168.1.10",
+    "event": "ssh_failed",
+    "count": 6,
+    "severity": "high",
+    "message": "6 failed SSH login attempts"
+    }
+
+    {
+        "timestamp": "2025-04-20T12:00:00Z",
+        "source_ip": "192.168.1.10",
+        "event": "ssh_failed",
+        "count": 6,
+        "severity": "high"
+    },
+    {
+        "timestamp": "2025-04-20T12:05:00Z",
+        "source_ip": "192.168.1.20",
+        "event": "port_scan",
+        "ports_scanned": 15,
+        "severity": "medium"
+    },
+    {
+        "timestamp": "2025-04-20T12:07:00Z",
+        "source_ip": "192.168.1.50",
+        "event": "login_success",
+        "user": "admin",
+        "severity": "low"
+    },
+    {
+        "timestamp": "2025-04-20T12:10:00Z",
+        "source_ip": "10.0.0.99",
+        "event": "data_exfil",
+        "bytes_transferred": 123456789,
+        "severity": "critical"
+    },
+    {
+        "timestamp": "2025-04-20T12:12:00Z",
+        "source_ip": "192.168.1.100",
+        "event": "ssh_failed",
+        "count": 3,
+        "severity": "medium"
+    },
+    {
+        "timestamp": "2025-04-20T12:15:00Z",
+        "source_ip": "172.16.0.5",
+        "event": "dns_tunneling",
+        "severity": "critical"
+    },
+    {
+        "timestamp": "2025-04-20T12:20:00Z",
+        "source_ip": "192.168.1.25",
+        "event": "ransomware_activity",
+        "files_encrypted": 1500,
+        "severity": "critical"
+    },
+    {
+        "timestamp": "2025-04-20T12:30:00Z",
+        "source_ip": "192.168.1.15",
+        "event": "login_failed",
+        "user": "root",
+        "count": 10,
+        "severity": "high"
+    },
+    {
+        "timestamp": "2025-04-20T12:35:00Z",
+        "source_ip": "192.168.1.77",
+        "event": "login_success",
+        "user": "backup",
+        "login_count": 25,
+        "severity": "low"
+    },
+    {
+        "timestamp": "2025-04-20T12:40:00Z",
+        "source_ip": "192.168.1.77",
+        "event": "login_success",
+        "user": "backup",
+        "login_count": 99,
+        "bytes_transferred": 98765432,
+        "severity": "low"
+    }
+]

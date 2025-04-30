@@ -1,0 +1,3 @@
+- name: "SSH Bruteforce Attack"
+  condition: "log.get('event') == 'ssh_failed' and log.get('count', 0) > 5"
+  severity: "high"
